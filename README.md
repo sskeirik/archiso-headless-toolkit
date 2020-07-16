@@ -25,11 +25,18 @@ Installation
 ------------
 
 This toolkit depends on a working Arch Linux installation with Arch ISO
-installed, i.e.,
+installed, i.e., do the following on the ISO build machine:
 
 ```
 sudo pacman -S archiso
 ```
+
+The VirtualBox bash completion scripts simplify working with VirtualBox, in
+general, due to its plethora (and verbosity) of options.
+Thus, it is recommended to install these scripts (accessible at the link below)
+on the VM host machine.
+
+https://github.com/gryf/vboxmanage-bash-completion
 
 Usage
 -----
