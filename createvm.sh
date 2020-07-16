@@ -18,13 +18,16 @@ if [ ! -f "$VM_ISO_PATH" ]; then
 fi
 
 vboxmanage createvm --basefolder "$VM_ROOT" --name "$VM_NAME" --register
+
+# attach storage
 vboxmanage createmedium disk --filename "$VM_DISK" --size $(( 1024 * $VM_DISK_SIZE ))
 vboxmanage storagectl "$VM_NAME" --name "SATA Controller" --add sata --controller IntelAHCI
 vboxmanage storageattach "$VM_NAME" --storagectl "SATA Controller" --port 0 --device 0 --type hdd --medium "$VM_DISK"
-vboxmanage storagectl "$VM_NAME" --name "IDE Controller" --add ide
-vboxmanage storageattach "$VM_NAME" --storagectl "IDE Controller" --port 0 --device 0 --type dvddrive --medium "$VM_ISO_PATH"
-# vboxmanage modifyvm "$VM_NAME" --ioapic on
+
+# set memory
 vboxmanage modifyvm "$VM_NAME" --memory $(( 1024 * $VM_MEM_SIZE ))
+
+# setup initial nat rule
 vboxmanage modifyvm "$VM_NAME" --nic1 nat
 vboxmanage modifyvm "$VM_NAME" --natpf1 "guestssh,tcp,,2222,,22"
 vboxmanage modifyvm "$VM_NAME" --natdnshostresolver1 on
