@@ -95,7 +95,8 @@ following:
     detachiso
     ```
 
-7.  Boot the VM as int step (3). If all goes well, you will be able to log-in
+7.  Boot the VM as int step (3).
+    If all goes well, you will be able to log-in
     to the VM using the same command as step (4).
 
 ### Alternative Use Cases
@@ -122,9 +123,9 @@ headlessly additionally requires that you configure:
 - an internet connection
 
 The process of setting up the SSH server is straightforward. Obviously, setting
-up an internet connection will vary between deployments. In the simplest case,
-e.g. installations beneath a router/DHCP server, it is enough to install a
-DHCP client service like `dhcpcd` and activate it on boot:
+up an internet connection will vary between deployments.
+In the simplest case, e.g. installations beneath a router/DHCP server, it is
+enough to install a DHCP client service like `dhcpcd` and activate it on boot:
 
 ```
 $ systemctl enable dhcpcd.service
