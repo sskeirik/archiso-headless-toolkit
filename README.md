@@ -134,6 +134,8 @@ systemctl enable dhcpcd.service
 Installation Failure Recovery Options
 -------------------------------------
 
+### Installation Debugging
+
 If installation fails so that the installed VM does not properly boot with SSH
 connectivity, VirtualBox offers a very crude form of debugging:
 
@@ -173,3 +175,8 @@ connectivity, VirtualBox offers a very crude form of debugging:
 
 This process is very slow---it is much more advisable to script your
 installation process so that you avoid these kind of errors.
+
+### VM Introspection using Installation ISO
+
+One can inspect the VM filesystem state by re-attaching the installation ISO,
+connecting to the VM, and then mounting and `chroot`ing into the VM filesystem.
