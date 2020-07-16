@@ -22,5 +22,9 @@ chmod 600 airootfs/etc/skel/.ssh/authorized_keys
 echo systemctl enable sshd.service \
      >> airootfs/root/customize_airootfs.sh
 
+# enable auto-boot after 5 seconds
+echo "TOTALTIMEOUT 50" \
+     >> syslinus/archiso_head.cfg
+
 # run build
 sudo "$SCRIPT_DIR/build/build.sh"
