@@ -130,3 +130,40 @@ enough to install a DHCP client service like `dhcpcd` and activate it on boot:
 ```
 $ systemctl enable dhcpcd.service
 ```
+
+Installation Failure Recovery Options
+-------------------------------------
+
+If installation fails so that the installed VM does not properly boot with SSH
+connectivity, VirtualBox offers a very crude form of debugging:
+
+-   screenshot VM screen on the host machine
+
+    ```
+    VBoxManage controlvm <vmname> screenhostpng <filename>
+    ```
+
+-   copy images to the user machine for manual inspection
+-   type keys on the virtual keyboard attached to the VM using scancodes:
+
+    ```
+    VBoxManage controlvm <vmname> keyboardputscancode <hex> [<hex>]*
+    ```
+
+    or strings:
+
+    ```
+    VBoxManage controlvm <vmname> keyboardputstring <string>
+    ```
+
+    or entire files:
+
+    ```
+    VBoxManage controlvm <vmname> keyboardputfile <filename>
+    ```
+
+    Note that in the last case, newlines will be interpreted as pressing the
+    Enter key.
+
+This process is very slow---it is much more advisable to script your
+installation process so that you avoid these kind of errors.
