@@ -128,7 +128,7 @@ In the simplest case, e.g. installations beneath a router/DHCP server, it is
 enough to install a DHCP client service like `dhcpcd` and activate it on boot:
 
 ```
-$ systemctl enable dhcpcd.service
+systemctl enable dhcpcd.service
 ```
 
 Installation Failure Recovery Options
