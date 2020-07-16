@@ -187,3 +187,34 @@ installation process so that you avoid these kind of errors.
 
 One can inspect the VM filesystem state by re-attaching the installation ISO,
 connecting to the VM, and then mounting and `chroot`ing into the VM filesystem.
+
+License and Attribution Information
+-----------------------------------
+
+The `rebuildiso` script in this repository is based on snippets available at:
+
+https://wiki.archlinux.org/index.php/Install_Arch_Linux_via_SSH
+
+and, as such, is made available under the
+[GNU Free Documentation License](https://www.gnu.org/licenses/fdl-1.3.html).
+
+The `createvm` and `attachiso` scripts in this repository are adapted from this
+blogpost:
+
+https://leemendelowitz.github.io/blog/ubuntu-server-virtualbox.html
+
+All other materials in this repository are provided under the Zero-Clause BSD
+license:
+
+Copyright (C) 2020 by Stephen Skeirik <skeirik2@illinois.edu>
+
+Permission to use, copy, modify, and/or distribute this software for any purpose
+with or without fee is hereby granted.
+
+THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES WITH
+REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY AND
+FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY SPECIAL, DIRECT,
+INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM LOSS
+OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR OTHER
+TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF
+THIS SOFTWARE.
