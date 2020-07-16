@@ -48,7 +48,7 @@ following:
     location (if required).
 
     ```
-    rebuild
+    rebuildiso
     ```
 
     The script will delete and recreate the `./build` directory.
