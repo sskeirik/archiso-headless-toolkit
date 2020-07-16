@@ -105,6 +105,10 @@ the following discussion:
 
 https://wiki.archlinux.org/index.php/Install_Arch_Linux_via_SSH
 
+This unmaintained repository attempts to do something similar to the above:
+
+https://github.com/EnigmaCurry/archiso-ssh-remix
+
 Headless Environment Installation Precautions
 ---------------------------------------------
 
