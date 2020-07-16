@@ -150,6 +150,12 @@ connectivity, VirtualBox offers a very crude form of debugging:
     VBoxManage controlvm <vmname> keyboardputscancode <hex> [<hex>]*
     ```
 
+    Example: type enter into VM
+
+    ```
+    VBoxManage controlvm <vmname> keyboardputscancode 1c 9c
+    ```
+
     or strings:
 
     ```
